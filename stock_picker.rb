@@ -18,8 +18,9 @@ def stock_picker(arr)
         }
     }
     #convert the answers for [buy,sell] into their appropriate index values in arr
-    answer.map!{ |a| arr.index(a) }
-    p answer
+    answer.map!{ |a| arr.index(a) + 1 }
+    p "Buy Day: #{answer[0]}"
+    p "Sell Day: #{answer[1]}"
 end
 
 stock_picker([17,3,6,9,15,8,6,1,10])
